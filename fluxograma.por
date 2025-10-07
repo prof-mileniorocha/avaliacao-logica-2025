@@ -2,11 +2,18 @@ programa {
   funcao inicio() {
     real valorDaCompra, valorPago, troco
 
-    escreva("Digite o Valor da Compra: ")
+    escreva("Digite o Valor da Compra: R$ ")
     leia(valorDaCompra)
-    escreva("Digite o Valor Pago: ")
+
+    se (valorDaCompra <= 0) {
+      escreva("Valor da compra incorreto!")
+      retorne
+    }
+
+    escreva("Digite o Valor Pago: R$ ")
     leia(valorPago)
-    troco = valorDaCompra - valorPago
-    escreva(troco)
+
+    troco = valorPago - valorDaCompra
+    escreva("O troco é : R$ ", troco)
   }
 }
